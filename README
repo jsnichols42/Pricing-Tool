@@ -1,5 +1,5 @@
 Python project that creates a pricing tool.
-Version 1.2
+Version 2.0
 Made for my father's company to figure paper prices more easily and efficiently.
 Classes include: Paper, Admin, Login, and PricingTool
 Classes to be added as of 7/21/2019: Print
