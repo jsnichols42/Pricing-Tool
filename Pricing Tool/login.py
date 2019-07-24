@@ -41,11 +41,18 @@ class Login(tk.Toplevel):
 		'''This function gets the entry fields of username and password,
 		   checks to see if they are correct and starts the admin window 
 		   if they are'''
+		
+		#Makes it a wee bit harder to figure out the username and password ;)
+		usercharacterList = [chr(97), chr(100), chr(109), chr(105), chr(110)]
+		passcharacterList = [chr(112), chr(101), chr(97), chr(110), chr(117), chr(116), chr(50), chr(53)]
+		correctUsername = "".join(usercharacterList)
+		correctPassword = "".join(passcharacterList)
+		
 		username = self.username_entry.get()
 		password = self.password_entry.get()
 
 		#Still learning how to conceal sensitive info like this from my src
-		if username == "admin" and password == "admin":
+		if username == correctUsername and password == correctPassword:
 
 			self.admin = tk.Toplevel(self.new)
 			adminwindow = Admin(self.admin)
